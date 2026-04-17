@@ -102,6 +102,18 @@
 
 ## 架构
 
+<p align="center">
+  <img src="docs/assets/architecture-diagram.svg" width="96%" alt="Writer Copilot 系统架构图（Browser → FastAPI → LangGraph / LLM → 存储层）" />
+</p>
+
+<p align="center">
+  <b>可编辑源稿</b>：<a href="docs/assets/system-architecture.excalidraw"><code>docs/assets/system-architecture.excalidraw</code></a>
+  · 用 <a href="https://excalidraw.com">Excalidraw</a> 打开即可改布局、配色并导出 PNG / SVG
+</p>
+
+<details>
+<summary><b>Mermaid 简图（与上图一致）</b></summary>
+
 ```mermaid
 flowchart LR
   subgraph Client["🖥️ Browser"]
@@ -120,6 +132,8 @@ flowchart LR
   API --> KB
   API --> G
 ```
+
+</details>
 
 | 要点 | 说明 |
 |:---|:---|
@@ -301,6 +315,8 @@ docker compose up -d
 | [`requirements.md`](requirements.md) | 需求契约、MoSCoW、里程碑、风险 |
 | [`frontend/DESIGN.md`](frontend/DESIGN.md) | 前端设计系统 |
 | [`docs/langgraph-evolution.md`](docs/langgraph-evolution.md) | LangGraph 演进笔记 |
+| [`docs/assets/system-architecture.excalidraw`](docs/assets/system-architecture.excalidraw) | 系统架构图（Excalidraw 可编辑源稿） |
+| [`docs/assets/architecture-diagram.svg`](docs/assets/architecture-diagram.svg) | 架构图（SVG，README 内嵌用） |
 | [`backend/README.md`](backend/README.md) | 后端专项说明 |
 
 ---

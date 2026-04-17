@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="archTitle">
+  <title id="archTitle">Writer Copilot System Architecture</title>
+  <defs>
+    <linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#134e4a"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="560" fill="#fafafa"/>
+  <text x="500" y="42" text-anchor="middle" fill="#0f172a" font-family="ui-sans-serif,system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700">Writer Copilot ? System Architecture</text>
+  <text x="500" y="68" text-anchor="middle" fill="#64748b" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13">Vue 3 + Vite ? FastAPI ? LangGraph / LLM ? Chroma ? Neo4j ? SQLite</text>
+
+  <!-- Client -->
+  <rect x="48" y="118" rx="10" ry="10" width="168" height="76" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="1.5"/>
+  <text x="132" y="150" text-anchor="middle" fill="#1e1e1e" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="600">Browser</text>
+  <text x="132" y="172" text-anchor="middle" fill="#374151" font-family="ui-sans-serif,sans-serif" font-size="12">Vue 3 + Vite</text>
+
+  <!-- Arrow -->
+  <line x1="216" y1="156" x2="268" y2="156" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="228" y="148" fill="#64748b" font-family="ui-sans-serif,sans-serif" font-size="11">/api/v1</text>
+
+  <!-- FastAPI -->
+  <rect x="268" y="108" rx="10" ry="10" width="208" height="96" fill="#ffd43b" stroke="#1e1e1e" stroke-width="1.5"/>
+  <text x="372" y="142" text-anchor="middle" fill="#1e1e1e" font-family="ui-sans-serif,sans-serif" font-size="15" font-weight="600">FastAPI</text>
+  <text x="372" y="166" text-anchor="middle" fill="#374151" font-family="ui-sans-serif,sans-serif" font-size="11">CORS ? Trace ? REST</text>
+
+  <!-- Arrow -->
+  <line x1="476" y1="156" x2="528" y2="156" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LangGraph -->
+  <rect x="528" y="112" rx="10" ry="10" width="176" height="88" fill="#96f2d7" stroke="#1e1e1e" stroke-width="1.5"/>
+  <text x="616" y="144" text-anchor="middle" fill="#1e1e1e" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="600">LangGraph</text>
+  <text x="616" y="166" text-anchor="middle" fill="#374151" font-family="ui-sans-serif,sans-serif" font-size="11">???\A ? Checkpoint</text>
+
+  <!-- FastAPI to LLM -->
+  <line x1="372" y1="204" x2="372" y2="248" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LLM -->
+  <rect x="278" y="248" rx="10" ry="10" width="188" height="72" fill="#d0bfff" stroke="#1e1e1e" stroke-width="1.5"/>
+  <text x="372" y="278" text-anchor="middle" fill="#1e1e1e" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="600">LLM Router</text>
+  <text x="372" y="298" text-anchor="middle" fill="#374151" font-family="ui-sans-serif,sans-serif" font-size="10">DashScope ? Anthropic ? Ollama &</text>
+
+  <!-- LangGraph to SQLite -->
+  <polyline points="616,200 616,320 588,352" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- FastAPI to Neo4j -->
+  <line x1="372" y1="204" x2="372" y2="360" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- FastAPI to Chroma (diagonal) -->
+  <line x1="310" y1="204" x2="142" y2="360" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Data layer -->
+  <text x="500" y="348" text-anchor="middle" fill="#64748b" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="600">Data &amp; storage</text>
+
+  <rect x="64" y="360" rx="8" ry="8" width="156" height="64" fill="#fff3bf" stroke="#1e1e1e" stroke-width="1.5"/>
+  <text x="142" y="388" text-anchor="middle" fill="#1e1e1e" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="600">Chroma</text>
+  <text x="142" y="408" text-anchor="middle" fill="#374151" font-family="ui-sans-serif,sans-serif" font-size="11">??"</text>
+
+  <rect x="268" y="360" rx="8" ry="8" width="156" height="64" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="1.5"/>
+  <text x="346" y="388" text-anchor="middle" fill="#1e1e1e" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="600">Neo4j</text>
+  <text x="346" y="408" text-anchor="middle" fill="#374151" font-family="ui-sans-serif,sans-serif" font-size="11">???1</text>
+
+  <rect x="472" y="352" rx="8" ry="8" width="232" height="80" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="1.5"/>
+  <text x="588" y="382" text-anchor="middle" fill="#1e1e1e" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="600">SQLite</text>
+  <text x="588" y="404" text-anchor="middle" fill="#374151" font-family="ui-sans-serif,sans-serif" font-size="11">?(pn + LangGraph Checkpoint</text>
+
+  <text x="500" y="480" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,sans-serif" font-size="11">?	Docker Compose? + Neo4j	? profilescheduler
+</text>
+  <text x="500" y="502" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,sans-serif" font-size="11">?????docs/assets/system-architecture.excalidraw</text>
+</svg>
