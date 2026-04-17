@@ -1,9 +1,5 @@
 <div align="center">
 
-<img src="docs/assets/banner.svg" width="92%" alt="Writer Copilot — Creator Copilot banner" />
-
-<br/>
-
 # ✍️ Writer Copilot
 
 ### *Creator Copilot — 技术创作者的 AI 创作副驾驶*
@@ -48,7 +44,7 @@
 | [快速开始](#quickstart) | 本地开发 · 测试 · 配置 |
 | [Docker](#docker) | Compose 服务与注意事项 |
 | [文档索引](#docs) | 需求 / 设计 / 演进文档 |
-| [演示与截图](#demo) | Banner / 界面演示占位 |
+| [演示与截图](#demo) | 界面演示占位 |
 | [Star History](#stars) | 仓库 Star 曲线 |
 | [Contributors](#contributors) | 贡献者头像墙 |
 
@@ -330,8 +326,6 @@ docker compose up -d
 | 创作工作台 · Editor | 知识库 · Knowledge | 内容矩阵 · Matrix |
 |:---:|:---:|:---:|
 | <img src="docs/assets/placeholder-screen.svg" width="100%" alt="创作工作台预览占位" /> | <img src="docs/assets/placeholder-screen.svg" width="100%" alt="知识库预览占位" /> | <img src="docs/assets/placeholder-screen.svg" width="100%" alt="内容矩阵预览占位" /> |
-
-顶部 Banner 源文件为 [`docs/assets/banner.svg`](docs/assets/banner.svg)，可直接用矢量工具改配色与文案。
 
 ---
 
