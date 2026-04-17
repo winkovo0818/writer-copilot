@@ -1,0 +1,68 @@
+// DESIGN.md — ElevenLabs-inspired tokens
+// Using Cormorant Garamond 300 as an ethereal replacement for Waldenburg
+
+$color-white: #ffffff;
+$color-bg-muted: #f5f5f5;
+$color-warm-stone: #f5f2ef;
+$color-warm-stone-alpha: rgba(245, 242, 239, 0.8);
+$color-black: #000000;
+$color-text-secondary: #4e4e4e;
+$color-text-muted: #777169;
+$color-border: #e5e5e5;
+$color-border-subtle: rgba(0, 0, 0, 0.05);
+
+// Typography
+$font-display: 'Cormorant Garamond', serif;
+$font-body: 'Inter', system-ui, -apple-system, sans-serif;
+$font-mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+
+// Shadows (Multi-layered stacks at sub-0.1 opacity)
+$shadow-inset-border: rgba(0, 0, 0, 0.075) 0 0 0 0.5px inset;
+$shadow-outline: rgba(0, 0, 0, 0.06) 0 0 0 1px;
+$shadow-soft: rgba(0, 0, 0, 0.04) 0 4px 4px;
+$shadow-card: rgba(0, 0, 0, 0.4) 0 0 1px, rgba(0, 0, 0, 0.04) 0 4px 4px;
+$shadow-warm: rgba(78, 50, 23, 0.04) 0 6px 16px;
+$shadow-level-1: rgba(0, 0, 0, 0.06) 0 0 0 1px, rgba(0, 0, 0, 0.04) 0 1px 2px, rgba(0, 0, 0, 0.04) 0 2px 4px;
+
+// Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-card: 20px;
+$radius-section: 24px;
+$radius-pill: 9999px;
+
+// Mixins
+@mixin body-text($size: 16px, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.5;
+  letter-spacing: 0.16px;
+}
+
+@mixin display-300 {
+  font-family: $font-display;
+  font-weight: 300;
+  color: $color-black;
+}
+
+@mixin card-surface {
+  background: $color-white;
+  border-radius: $radius-card;
+  box-shadow: $shadow-level-1;
+  border: 1px solid $color-border;
+}
+
+@mixin pill-button-white {
+  background: $color-white;
+  border-radius: $radius-pill;
+  box-shadow: $shadow-card;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 0 0 1px;
+  }
+}

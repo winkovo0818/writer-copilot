@@ -1,0 +1,29 @@
+{
+  "host": "0.0.0.0",
+  "port": 8787,
+  "api_key": "sk-umans-2api-local",
+  "upstream_url": "https://app.umans.ai/api/chat",
+  "default_model": "coding-model",
+  "available_models": [
+    "coding-model-large",
+    "coding-model",
+    "coding-model-light",
+    "chat-model-large",
+    "chat-model-codex"
+  ],
+  "claude_model_map": {
+    "claude-opus-4-6": "coding-model-large",
+    "claude-sonnet-4-6": "coding-model",
+    "claude-haiku-4-5": "coding-model-light"
+  },
+  "claude_keyword_map": {
+    "opus": "coding-model-large",
+    "sonnet": "coding-model",
+    "haiku": "coding-model-light"
+  },
+  "cookies": {
+    "__Host-authjs.csrf-token": "20e7f511f4ea5fa3f9d56d26ca924970c4cfa5c0029a0b67a2a24f9589609dc8",
+    "__Secure-authjs.callback-url": "https%3A%2F%2Fapp.umans.ai%2F",
+    "__Secure-authjs.session-token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoielB3cGhycV9UNGxIVUpGeG8zNkxTMWY4YklpNG45djlBcXJ4WWhxTlo2N19fejRwTE9PWHlhMkVESkVxVEdMR0toSzJMTmtoZWZ6ZU1zcXV3MDIxcmcifQ"
+  }
+}

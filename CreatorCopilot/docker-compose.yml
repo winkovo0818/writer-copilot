@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./data:/app/data
+      - ./backend/prompts:/app/prompts
+    depends_on:
+      - neo4j
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  neo4j:
+    image: neo4j:5-community
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-password}
+      NEO4J_PLUGINS: '["apoc"]'
+    volumes:
+      - ./data/neo4j:/data
+    networks:
+      - app-network
+
+  scheduler:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: python -m app.scheduler.worker
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - backend
+      - neo4j
+    networks:
+      - app-network
+    profiles:
+      - scheduler
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  data:

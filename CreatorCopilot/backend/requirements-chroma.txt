@@ -1,0 +1,5 @@
+# 向量知识库（可选依赖）
+# Windows 上 chromadb 依赖 chroma-hnswlib，若无 cp313 预编译 wheel 会从源码编译，
+# 需安装 Microsoft C++ Build Tools；或使用 Python 3.11/3.12 后再安装。
+# Docker/Linux 通常可直接 pip 安装。
+chromadb>=0.4.22

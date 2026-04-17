@@ -1,0 +1,49 @@
+# 默认不包含 chromadb（见 requirements-chroma.txt），避免 Windows 无 MSVC 时安装失败。
+# 需要知识库向量检索时：pip install -r requirements-chroma.txt
+
+# Core
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+pydantic>=2.7.4,<3
+pydantic-settings==2.1.0
+
+# Database
+# >=2.0.31 以兼容 Python 3.13（TypingOnly / __static_attributes__ 等）
+sqlalchemy[asyncio]>=2.0.38,<3
+aiosqlite>=0.20.0
+alembic==1.13.1
+
+# LangGraph（StateGraph + interrupt + SQLite checkpoint）
+langchain-core>=0.3.15
+langgraph>=0.2.45
+langgraph-checkpoint-sqlite>=2.0.0
+
+# LLM Providers
+dashscope==1.14.1
+anthropic==0.18.0
+httpx==0.26.0
+
+# Vector & Graph（Chroma 见 requirements-chroma.txt）
+neo4j==5.18.0
+networkx==3.2.1
+
+# Scheduler
+apscheduler==3.10.4
+
+# Utils
+python-multipart==0.0.9
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+loguru==0.7.2
+structlog==24.1.0
+
+# WeChat
+wechatpy==1.8.18
+
+# Image - pexels-python removed for MVP, use built-in strategies
+
+# Testing
+pytest>=8.2.0,<9
+pytest-asyncio>=0.24.0
+pytest-cov==4.1.0
+httpx==0.26.0

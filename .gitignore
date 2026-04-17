@@ -1,0 +1,53 @@
+# IDE / 编辑器
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.cover
+
+# Node / 前端构建
+node_modules/
+dist/
+*.local
+.cache/
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 日志与本地数据（SQLite / Chroma / LangGraph checkpoint）
+*.log
+**/backend/data/
+**/langgraph*.db
+
+# 临时文件
+*.tmp
+*.temp
+~$*
