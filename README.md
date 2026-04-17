@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="docs/assets/banner.svg" width="92%" alt="Writer Copilot — Creator Copilot banner" />
+
+<br/>
+
 # ✍️ Writer Copilot
 
 ### *Creator Copilot — 技术创作者的 AI 创作副驾驶*
@@ -23,7 +27,7 @@
 
 <br/>
 
-[📑 目录](#目录) · [快速开始](#quickstart) · [文档索引](#docs)
+[📑 目录](#目录) · [快速开始](#quickstart) · [演示](#demo) · [文档索引](#docs)
 
 </div>
 
@@ -44,6 +48,9 @@
 | [快速开始](#quickstart) | 本地开发 · 测试 · 配置 |
 | [Docker](#docker) | Compose 服务与注意事项 |
 | [文档索引](#docs) | 需求 / 设计 / 演进文档 |
+| [演示与截图](#demo) | Banner / 界面演示占位 |
+| [Star History](#stars) | 仓库 Star 曲线 |
+| [Contributors](#contributors) | 贡献者头像墙 |
 
 ---
 
@@ -295,6 +302,40 @@ docker compose up -d
 | [`frontend/DESIGN.md`](frontend/DESIGN.md) | 前端设计系统 |
 | [`docs/langgraph-evolution.md`](docs/langgraph-evolution.md) | LangGraph 演进笔记 |
 | [`backend/README.md`](backend/README.md) | 后端专项说明 |
+
+---
+
+<a id="demo"></a>
+
+## 演示与截图
+
+> **替换说明**：可将录屏导出为 **GIF**（建议 &lt; 8MB）或 **WebP / PNG** 截图，放入 `docs/assets/` 并改下方路径；亦可用图床链接替换 `src`。
+
+| 创作工作台 · Editor | 知识库 · Knowledge | 内容矩阵 · Matrix |
+|:---:|:---:|:---:|
+| <img src="docs/assets/placeholder-screen.svg" width="100%" alt="创作工作台预览占位" /> | <img src="docs/assets/placeholder-screen.svg" width="100%" alt="知识库预览占位" /> | <img src="docs/assets/placeholder-screen.svg" width="100%" alt="内容矩阵预览占位" /> |
+
+顶部 Banner 源文件为 [`docs/assets/banner.svg`](docs/assets/banner.svg)，可直接用矢量工具改配色与文案。
+
+---
+
+<a id="stars"></a>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=winkovo0818/writer-copilot&type=Date)](https://www.star-history.com/#winkovo0818/writer-copilot&Date)
+
+---
+
+<a id="contributors"></a>
+
+## Contributors
+
+感谢每一位贡献者。
+
+<a href="https://github.com/winkovo0818/writer-copilot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=winkovo0818/writer-copilot" alt="Contributors" />
+</a>
 
 ---
 
