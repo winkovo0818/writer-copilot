@@ -99,7 +99,7 @@
 ## 架构
 
 <p align="center">
-  <img src="docs/assets/architecture-diagram.svg" width="96%" alt="Writer Copilot 系统架构图（Browser → FastAPI → LangGraph / LLM → 存储层）" />
+  <img src="docs/assets/系统架构图.png" width="96%" alt="Writer Copilot 系统架构图（Browser → FastAPI → LangGraph / LLM → 存储层）" />
 </p>
 
 <p align="center">
